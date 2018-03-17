@@ -10,4 +10,7 @@ var server = http.createServer(function(req, res) {
 });
 
 // ポート番号3000番で受け付けるサーバーを起動する。
-server.listen(3000);
+server.listen(3000, function() {
+	// 起動したことを表すメッセージを追加。
+	console.log('Server started, listening on : 3000');
+});
