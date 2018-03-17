@@ -9,6 +9,11 @@ var server = http.createServer(function(req, res) {
     res.end("Hello JSCafe");
 });
 
+// listeningイベントを受け取り、表示する。
+server.on('listening', function(){
+  console.log('Server started, listening on : 3000');
+});
+
 // ポート番号3000番で受け付けるサーバーを起動する。
 server.listen(3000, function() {
 	// 起動したことを表すメッセージを追加。
